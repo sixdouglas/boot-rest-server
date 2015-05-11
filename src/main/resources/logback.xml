@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Pattern>
+		</encoder>
+	</appender>
+<!--
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>c:/myapp.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>c:/myapp.%i.log.zip</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>10</MaxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>2MB</MaxFileSize>
+		</triggeringPolicy>
+
+	</appender>
+-->
+	<logger name="org.hibernate.type" level="WARN" />
+	<logger name="org.hibernate" level="WARN" />
+
+	<logger name="org.douglas.tournament.Application" level="INFO" />
+	
+	<!-- ### log just the SQL ### -->
+<!--
+	<logger name="org.hibernate.SQL" level="DEBUG"/>
+-->
+	<!-- ### log JDBC bind parameters ### -->
+<!--
+	<logger name="org.hibernate.type" level="TRACE"/>
+-->
+	<!-- ### log Database Structure ### -->
+<!--
+	<logger name="org.hibernate.tool.hbm2ddl" level="DEBUG"/>
+-->
+
+	<root level="WARN">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
