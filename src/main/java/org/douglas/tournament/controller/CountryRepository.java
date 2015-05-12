@@ -11,4 +11,6 @@ import java.util.List;
 public interface CountryRepository extends PagingAndSortingRepository<Country, Long> {
 
   List<Country> findByName(@Param("name") String name);
+  
+  List<Country> findByNameStartingWithIgnoreCase(@Param("name") String name);
 }
