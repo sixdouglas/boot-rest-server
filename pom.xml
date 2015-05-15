@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>org.douglas.tournament</groupId>
-	<artifactId>boot-rest</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>boot-rest-server</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

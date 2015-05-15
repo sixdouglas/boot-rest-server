@@ -43,3 +43,8 @@ Temporary Items
 .apdisk
 *.class
 *.lst
+/target/
+
+.classpath
+.project
+*.prefs

@@ -11,4 +11,5 @@ import java.util.List;
 public interface TownRepository extends CrudRepository<Town, Long> {
 
   List<Town> findByName(@Param("name") String name);
+  List<Town> findByNameStartingWithIgnoreCase(@Param("name") String name);
 }
