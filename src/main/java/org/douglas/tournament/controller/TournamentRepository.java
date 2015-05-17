@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.douglas.tournament.domain.Tournament;
-import org.douglas.tournament.domain.Town;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
