@@ -21,14 +21,14 @@ public class Match {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, optional = false)
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
 	@JoinColumn(name = "tournament_id")
 	private Tournament tournament;
 
-	@OneToMany(mappedBy = "match", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "match", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
 	private List<Point> points;
 
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST })
 	@JoinTable(
 			name="MATCH_TEAM",
 			joinColumns={@JoinColumn(name="MATCH_ID", referencedColumnName="ID")},

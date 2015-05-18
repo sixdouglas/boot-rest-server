@@ -22,15 +22,15 @@ public class Tournament {
   private String name;
   private Date tournamentDate;
 
-  @ManyToOne(cascade = CascadeType.ALL, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
   @JoinColumn(name = "town_id")
   private Town town;
 
-  @ManyToOne(cascade = CascadeType.ALL, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
   @JoinColumn(name = "sport_id")
   private Sport sport;
 
-  @OneToMany(mappedBy = "tournament", cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(mappedBy = "tournament", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
   private List<Match> matches;
 
   public Long getId() {

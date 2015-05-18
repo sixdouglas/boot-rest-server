@@ -20,7 +20,7 @@ public class Country {
   private String alpha3;
   private String name;
 
-  @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(mappedBy = "country", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
   private List<Town> towns;
 
   public Long getId() {
@@ -39,7 +39,7 @@ public class Country {
     return alpha2;
   }
 
-  public void setAplha2(String aplha3) {
+  public void setAplha2(String alpha2) {
     this.alpha2 = alpha2;
   }
 
@@ -47,7 +47,7 @@ public class Country {
     return alpha3;
   }
 
-  public void setAplha3(String aplha3) {
+  public void setAplha3(String alpha3) {
     this.alpha3 = alpha3;
   }
 

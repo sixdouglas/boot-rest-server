@@ -16,8 +16,11 @@ public class Sport {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
-  @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(mappedBy = "sport", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
   private List<Tournament> tournaments;
+
+  @OneToMany(mappedBy = "sport", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
+  private List<PointType> pointTypes;
 
   private String name;
 
@@ -39,6 +42,14 @@ public class Sport {
 
   public void setTournaments(List<Tournament> tournaments) {
     this.tournaments = tournaments;
+  }
+
+  public List<PointType> getPointTypes() {
+    return pointTypes;
+  }
+
+  public void setPointTypes(List<PointType> pointTypes) {
+    this.pointTypes = pointTypes;
   }
 
   Sport() { // JPA Only

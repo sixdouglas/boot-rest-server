@@ -245,6 +245,12 @@ INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (239, 887, 'YE', 'YE
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (240, 891, 'CS', 'SCG', 'Serbia and Montenegro');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (241, 894, 'ZM', 'ZMB', 'Zambia');
 
+insert into point_type(id, name, value, sport_id) VALUES (1, 'RUGBY_TRY', 5, 1);
+insert into point_type(id, name, value, sport_id) VALUES (2, 'RUGBY_PENALTY_TRY', 5, 1);
+insert into point_type(id, name, value, sport_id) VALUES (3, 'RUGBY_CONVERSION', 2, 1);
+insert into point_type(id, name, value, sport_id) VALUES (4, 'RUGBY_PENALTY_GOAL', 3, 1);
+insert into point_type(id, name, value, sport_id) VALUES (5, 3, 3, 1);
+
 
 insert into town (id, name, postal_code, country_id) values (1, 'Armentieres', '59280', 75);
 insert into town (id, name, postal_code, country_id) values (2, 'Mouvaux', '59420', 75);
@@ -264,30 +270,30 @@ insert into match (id, date, tournament_id) values (1, '2015-05-01 16:00:00', 1)
 insert into match_team (match_id, team_id) values (1, 1);
 insert into match_team (match_id, team_id) values (1, 2);
 
-insert into point (id, date_time, type_point, match_id, team_id) values (1, '2015-05-01 16:05:10', 'RUGBY_TRY',       1, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (2, '2015-05-01 16:06:10', 'RUGBY_DROP_GOAL', 1, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (3, '2015-05-01 16:08:10', 'RUGBY_TRY',       1, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (4, '2015-05-01 16:07:10', 'RUGBY_DROP_GOAL', 1, 2);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (1, '2015-05-01 16:05:10', 1, 1, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (2, '2015-05-01 16:06:10', 3, 1, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (3, '2015-05-01 16:08:10', 1, 1, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (4, '2015-05-01 16:07:10', 3, 1, 2);
 
 insert into match (id, date, tournament_id) values (2, '2015-05-01 16:30:00', 1);
 
 insert into match_team (match_id, team_id) values (2, 1);
 insert into match_team (match_id, team_id) values (2, 3);
 
-insert into point (id, date_time, type_point, match_id, team_id) values (5, '2015-05-01 16:35:10', 'RUGBY_TRY',       2, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (6, '2015-05-01 16:36:10', 'RUGBY_DROP_GOAL', 2, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (7, '2015-05-01 16:38:10', 'RUGBY_TRY',       2, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (8, '2015-05-01 16:37:10', 'RUGBY_DROP_GOAL', 2, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (5, '2015-05-01 16:35:10', 1, 2, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (6, '2015-05-01 16:36:10', 3, 2, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (7, '2015-05-01 16:38:10', 1, 2, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (8, '2015-05-01 16:37:10', 3, 2, 3);
 
 insert into match (id, date, tournament_id) values (3, '2015-05-01 17:00:00', 1);
 
 insert into match_team (match_id, team_id) values (3, 2);
 insert into match_team (match_id, team_id) values (3, 3);
 
-insert into point (id, date_time, type_point, match_id, team_id) values (9,  '2015-05-01 17:05:10', 'RUGBY_TRY',       3, 3);
-insert into point (id, date_time, type_point, match_id, team_id) values (10, '2015-05-01 17:06:10', 'RUGBY_DROP_GOAL', 3, 3);
-insert into point (id, date_time, type_point, match_id, team_id) values (11, '2015-05-01 17:08:10', 'RUGBY_TRY',       3, 3);
-insert into point (id, date_time, type_point, match_id, team_id) values (12, '2015-05-01 17:07:10', 'RUGBY_DROP_GOAL', 3, 2);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (9,  '2015-05-01 17:05:10', 1, 3, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (10, '2015-05-01 17:06:10', 3, 3, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (11, '2015-05-01 17:08:10', 1, 3, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (12, '2015-05-01 17:07:10', 3, 3, 2);
 
 /* ************************ */
 /* ***** Tournament 2 ***** */
@@ -299,30 +305,30 @@ insert into match (id, date, tournament_id) values (4, '2015-05-08 16:00:00', 2)
 insert into match_team (match_id, team_id) values (4, 1);
 insert into match_team (match_id, team_id) values (4, 2);
 
-insert into point (id, date_time, type_point, match_id, team_id) values (13, '2015-05-08 16:05:10', 'RUGBY_TRY',       1, 2);
-insert into point (id, date_time, type_point, match_id, team_id) values (14, '2015-05-08 16:06:10', 'RUGBY_DROP_GOAL', 1, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (15, '2015-05-08 16:08:10', 'RUGBY_TRY',       1, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (16, '2015-05-08 16:07:10', 'RUGBY_DROP_GOAL', 1, 2);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (13, '2015-05-08 16:05:10', 1, 1, 2);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (14, '2015-05-08 16:06:10', 3, 1, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (15, '2015-05-08 16:08:10', 1, 1, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (16, '2015-05-08 16:07:10', 3, 1, 2);
 
 insert into match (id, date, tournament_id) values (5, '2015-05-08 16:30:00', 2);
 
 insert into match_team (match_id, team_id) values (5, 1);
 insert into match_team (match_id, team_id) values (5, 3);
 
-insert into point (id, date_time, type_point, match_id, team_id) values (17, '2015-05-08 16:35:10', 'RUGBY_TRY',       2, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (18, '2015-05-08 16:36:10', 'RUGBY_DROP_GOAL', 2, 3);
-insert into point (id, date_time, type_point, match_id, team_id) values (19, '2015-05-08 16:38:10', 'RUGBY_TRY',       2, 1);
-insert into point (id, date_time, type_point, match_id, team_id) values (20, '2015-05-08 16:37:10', 'RUGBY_DROP_GOAL', 2, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (17, '2015-05-08 16:35:10', 1, 2, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (18, '2015-05-08 16:36:10', 3, 2, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (19, '2015-05-08 16:38:10', 1, 2, 1);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (20, '2015-05-08 16:37:10', 3, 2, 3);
 
 insert into match (id, date, tournament_id) values (6, '2015-05-08 17:00:00', 2);
 
 insert into match_team (match_id, team_id) values (6, 2);
 insert into match_team (match_id, team_id) values (6, 3);
 
-insert into point (id, date_time, type_point, match_id, team_id) values (21, '2015-05-08 17:05:10', 'RUGBY_TRY',       3, 2);
-insert into point (id, date_time, type_point, match_id, team_id) values (22, '2015-05-08 17:06:10', 'RUGBY_DROP_GOAL', 3, 3);
-insert into point (id, date_time, type_point, match_id, team_id) values (23, '2015-05-08 17:08:10', 'RUGBY_TRY',       3, 3);
-insert into point (id, date_time, type_point, match_id, team_id) values (24, '2015-05-08 17:07:10', 'RUGBY_DROP_GOAL', 3, 2);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (21, '2015-05-08 17:05:10', 1, 3, 2);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (22, '2015-05-08 17:06:10', 3, 3, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (23, '2015-05-08 17:08:10', 1, 3, 3);
+insert into point (id, date_time, point_type_id, match_id, team_id) values (24, '2015-05-08 17:07:10', 3, 3, 2);
 
 /* ************************ */
 /* ***** Tournament 3 ***** */

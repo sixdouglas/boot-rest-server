@@ -4,8 +4,6 @@ import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,16 +17,17 @@ public class Point {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, optional = false)
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
 	@JoinColumn(name = "match_id")
 	private Match match;
 
-	@Enumerated(EnumType.STRING)
-	private TypePoint typePoint;
-
-	@ManyToOne(cascade = CascadeType.ALL, optional = false)
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
 	@JoinColumn(name = "team_id")
 	private Team team;
+
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
+	@JoinColumn(name = "point_type_id")
+	private PointType pointType;
 
 	private Date dateTime;
 
@@ -39,7 +38,6 @@ public class Point {
 	public Team getTeam() {
 		return team;
 	}
-
 	public void setTeam(Team team) {
 		this.team = team;
 	}
@@ -47,23 +45,20 @@ public class Point {
 	public Match getMatch() {
 		return match;
 	}
-
 	public void setMatch(Match match) {
 		this.match = match;
 	}
 
-	public TypePoint getTypePoint() {
-		return typePoint;
+	public PointType getPointType() {
+		return pointType;
 	}
-
-	public void setTypePoint(TypePoint typePoint) {
-		this.typePoint = typePoint;
+	public void setPointType(PointType pointType) {
+		this.pointType = pointType;
 	}
-
+	
 	public Date getDateTime() {
 		return dateTime;
 	}
-
 	public void setDateTime(Date dateTime) {
 		this.dateTime = dateTime;
 	}

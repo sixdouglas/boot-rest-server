@@ -23,15 +23,15 @@ public class Town {
   private String name;
   private String postalCode;
 
-  @ManyToOne(cascade = CascadeType.ALL, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
   @JoinColumn(name = "country_id")
   private Country country;
 
-  @OneToMany(mappedBy = "town", cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(mappedBy = "town", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
   private List<Team> teams;
 
   @JsonIgnore
-  @OneToMany(mappedBy = "town", cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(mappedBy = "town", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
   private List<Tournament> tournaments;
 
   public Long getId() {

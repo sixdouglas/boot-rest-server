@@ -22,14 +22,14 @@ public class Team {
 	private String name;
 	private String age;
 
-	@ManyToOne(cascade = CascadeType.ALL, optional = false)
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, optional = false)
 	@JoinColumn(name = "town_id")
 	private Town town;
 
-	@OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "team", cascade = { CascadeType.MERGE, CascadeType.PERSIST }, orphanRemoval = true)
 	private List<Point> points;
 
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="teams")
+	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST }, mappedBy="teams")
 	private List<Match> matches;
 
 	public Long getId() {
