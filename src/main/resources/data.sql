@@ -1,7 +1,3 @@
-insert into sport (id, name) values (1, 'Rugby');
-insert into sport (id, name) values (2, 'Football');
-insert into sport (id, name) values (3, 'Basketball');
-insert into sport (id, name) values (4, 'Volleyball');
 
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (1, 4, 'AF', 'AFG', 'Afghanistan');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (2, 8, 'AL', 'ALB', 'Albania');
@@ -76,7 +72,7 @@ INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (70, 238, 'FK', 'FLK
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (71, 239, 'GS', 'SGS', 'South Georgia and the South Sandwich Islands');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (72, 242, 'FJ', 'FJI', 'Fiji');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (73, 246, 'FI', 'FIN', 'Finland');
-INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (74, 248, 'AX', 'ALA', 'Ã…land Islands');
+INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (74, 248, 'AX', 'ALA', 'Åland Islands');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (75, 250, 'FR', 'FRA', 'France');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (76, 254, 'GF', 'GUF', 'French Guiana');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (77, 258, 'PF', 'PYF', 'French Polynesia');
@@ -112,7 +108,7 @@ INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (106, 368, 'IQ', 'IR
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (107, 372, 'IE', 'IRL', 'Ireland');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (108, 376, 'IL', 'ISR', 'Israel');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (109, 380, 'IT', 'ITA', 'Italy');
-INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (110, 384, 'CI', 'CIV', 'CÃ´te d''Ivoire');
+INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (110, 384, 'CI', 'CIV', 'Côte d''Ivoire');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (111, 388, 'JM', 'JAM', 'Jamaica');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (112, 392, 'JP', 'JPN', 'Japan');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (113, 398, 'KZ', 'KAZ', 'Kazakhstan');
@@ -182,7 +178,7 @@ INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (176, 624, 'GW', 'GN
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (177, 626, 'TL', 'TLS', 'Timor-Leste');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (178, 630, 'PR', 'PRI', 'Puerto Rico');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (179, 634, 'QA', 'QAT', 'Qatar');
-INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (180, 638, 'RE', 'REU', 'RÃ©union');
+INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (180, 638, 'RE', 'REU', 'Réunion');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (181, 642, 'RO', 'ROU', 'Romania');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (182, 643, 'RU', 'RUS', 'Russian Federation');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (183, 646, 'RW', 'RWA', 'Rwanda');
@@ -245,25 +241,140 @@ INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (239, 887, 'YE', 'YE
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (240, 891, 'CS', 'SCG', 'Serbia and Montenegro');
 INSERT INTO country (id, code, alpha2, alpha3, name) VALUES (241, 894, 'ZM', 'ZMB', 'Zambia');
 
-insert into point_type(id, name, value, sport_id) VALUES (1, 'RUGBY_TRY', 5, 1);
-insert into point_type(id, name, value, sport_id) VALUES (2, 'RUGBY_PENALTY_TRY', 5, 1);
-insert into point_type(id, name, value, sport_id) VALUES (3, 'RUGBY_CONVERSION', 2, 1);
-insert into point_type(id, name, value, sport_id) VALUES (4, 'RUGBY_PENALTY_GOAL', 3, 1);
-insert into point_type(id, name, value, sport_id) VALUES (5, 3, 3, 1);
+insert into sport (id, name) values (1, 'Rugby');
+insert into sport (id, name) values (2, 'Football');
+insert into sport (id, name) values (3, 'Basketball');
+insert into sport (id, name) values (4, 'Volleyball');
+insert into sport (id, name) values (5, 'Aerobatics');
+insert into sport (id, name) values (6, 'Air racing');
+insert into sport (id, name) values (7, 'Ballooning');
+insert into sport (id, name) values (8, 'Cluster ballooning');
+insert into sport (id, name) values (9, 'Hopper ballooning');
+insert into sport (id, name) values (10, 'Wingsuit flying');
+insert into sport (id, name) values (11, 'Gliding');
+insert into sport (id, name) values (12, 'Marching Band');
+insert into sport (id, name) values (13, 'Hang gliding');
+insert into sport (id, name) values (14, 'Powered hang glider');
+insert into sport (id, name) values (15, 'Human powered aircraft');
+insert into sport (id, name) values (16, 'Model aircraft');
+insert into sport (id, name) values (17, 'Parachuting');
+insert into sport (id, name) values (18, 'Banzai skydiving');
+insert into sport (id, name) values (19, 'BASE jumping');
+insert into sport (id, name) values (20, 'Skydiving');
+insert into sport (id, name) values (21, 'Skysurfing');
+insert into sport (id, name) values (22, 'Wingsuit flying');
+insert into sport (id, name) values (23, 'Paragliding');
+insert into sport (id, name) values (24, 'Paramotoring');
+insert into sport (id, name) values (25, 'Ultralight aviation');
+insert into sport (id, name) values (26, 'Field archery');
+insert into sport (id, name) values (27, 'Flight archery');
+insert into sport (id, name) values (28, 'Gungdo');
+insert into sport (id, name) values (29, 'Indoor archery');
+insert into sport (id, name) values (30, 'Kyudo');
+insert into sport (id, name) values (31, 'Popinjay');
+insert into sport (id, name) values (32, 'Target archery');
 
+insert into point_type(id, name, value, sport_id) VALUES (1, 'TRY', 5, 1);
+insert into point_type(id, name, value, sport_id) VALUES (2, 'PENALTY_TRY', 5, 1);
+insert into point_type(id, name, value, sport_id) VALUES (3, 'CONVERSION', 2, 1);
+insert into point_type(id, name, value, sport_id) VALUES (4, 'PENALTY_GOAL', 3, 1);
+insert into point_type(id, name, value, sport_id) VALUES (5, 'GOAL', 1, 2);
+insert into point_type(id, name, value, sport_id) VALUES (6, 'POINT', 1, 3);
+insert into point_type(id, name, value, sport_id) VALUES (7, 'HOME_RUN', 5, 3);
+insert into point_type(id, name, value, sport_id) VALUES (8, 'POINT', 1, 4);
+insert into point_type(id, name, value, sport_id) VALUES (9,  ' 1 POINT',   1, 26);
+insert into point_type(id, name, value, sport_id) VALUES (10, ' 2 POINTS',  2, 26);
+insert into point_type(id, name, value, sport_id) VALUES (11, ' 3 POINTS',  3, 26);
+insert into point_type(id, name, value, sport_id) VALUES (12, ' 4 POINTS',  4, 26);
+insert into point_type(id, name, value, sport_id) VALUES (13, ' 5 POINTS',  5, 26);
+insert into point_type(id, name, value, sport_id) VALUES (14, ' 6 POINTS',  6, 26);
+insert into point_type(id, name, value, sport_id) VALUES (15, ' 7 POINTS',  7, 26);
+insert into point_type(id, name, value, sport_id) VALUES (16, ' 8 POINTS',  8, 26);
+insert into point_type(id, name, value, sport_id) VALUES (17, ' 9 POINTS',  9, 26);
+insert into point_type(id, name, value, sport_id) VALUES (18, '10 POINTS', 10, 26);
+insert into point_type(id, name, value, sport_id) VALUES (19, ' 1 POINT',   1, 27);
+insert into point_type(id, name, value, sport_id) VALUES (20, ' 2 POINTS',  2, 27);
+insert into point_type(id, name, value, sport_id) VALUES (21, ' 3 POINTS',  3, 27);
+insert into point_type(id, name, value, sport_id) VALUES (22, ' 4 POINTS',  4, 27);
+insert into point_type(id, name, value, sport_id) VALUES (23, ' 5 POINTS',  5, 27);
+insert into point_type(id, name, value, sport_id) VALUES (24, ' 6 POINTS',  6, 27);
+insert into point_type(id, name, value, sport_id) VALUES (25, ' 7 POINTS',  7, 27);
+insert into point_type(id, name, value, sport_id) VALUES (26, ' 8 POINTS',  8, 27);
+insert into point_type(id, name, value, sport_id) VALUES (27, ' 9 POINTS',  9, 27);
+insert into point_type(id, name, value, sport_id) VALUES (28, '10 POINTS', 10, 27);
 
-insert into town (id, name, postal_code, country_id) values (1, 'Armentieres', '59280', 75);
-insert into town (id, name, postal_code, country_id) values (2, 'Mouvaux', '59420', 75);
-insert into town (id, name, postal_code, country_id) values (3, 'Ypres', '4521', 18);
+insert into town (id, name, postal_code, country_id) values (1, 'Lille', '59000', 75);
+insert into town (id, name, postal_code, country_id) values (2, 'Roubaix', '59100', 75);
+insert into town (id, name, postal_code, country_id) values (3, 'Tourcoing', '59200', 75);
+insert into town (id, name, postal_code, country_id) values (4, 'Dunkerque', '59140', 75);
+insert into town (id, name, postal_code, country_id) values (5, 'Villeneuve-d''Ascq ', '59650', 75);
+insert into town (id, name, postal_code, country_id) values (6, 'Valenciennes', '59300', 75);
+insert into town (id, name, postal_code, country_id) values (7, 'Douai', '59500', 75);
+insert into town (id, name, postal_code, country_id) values (8, 'Wattrelos', '59150', 75);
+insert into town (id, name, postal_code, country_id) values (9, 'Marcq-en-Baroeul', '59700', 75);
+insert into town (id, name, postal_code, country_id) values (10, 'Cambrai', '59400', 75);
+insert into town (id, name, postal_code, country_id) values (11, 'Maubeuge', '59600', 75);
+insert into town (id, name, postal_code, country_id) values (12, 'Lambersart', '59130', 75);
+insert into town (id, name, postal_code, country_id) values (13, 'Armentières', '59280', 75);
+insert into town (id, name, postal_code, country_id) values (14, 'La Madeleine', '59110', 75);
+insert into town (id, name, postal_code, country_id) values (15, 'Coudekerque-Branche', '59210', 75);
+insert into town (id, name, postal_code, country_id) values (16, 'Hazebrouck', '59190', 75);
+insert into town (id, name, postal_code, country_id) values (17, 'Mons-en-Baroeul', '59370', 75);
+insert into town (id, name, postal_code, country_id) values (18, 'Loos', '59120', 75);
+insert into town (id, name, postal_code, country_id) values (19, 'Grande-Synthe', '59760', 75);
+insert into town (id, name, postal_code, country_id) values (20, 'Halluin', '59250', 75);
+insert into town (id, name, postal_code, country_id) values (21, 'Croix', '59170', 75);
+insert into town (id, name, postal_code, country_id) values (22, 'Wasquehal', '59290', 75);
+insert into town (id, name, postal_code, country_id) values (23, 'Denain', '59220', 75);
+insert into town (id, name, postal_code, country_id) values (24, 'Ronchin', '59790', 75);
+insert into town (id, name, postal_code, country_id) values (25, 'Hem ', '59510', 75);
+insert into town (id, name, postal_code, country_id) values (26, 'Faches-Thumesnil', '59155', 75);
+insert into town (id, name, postal_code, country_id) values (27, 'Saint-Amand-les-Eaux', '59230', 75);
+insert into town (id, name, postal_code, country_id) values (28, 'Sin-le-Noble', '59450', 75);
+insert into town (id, name, postal_code, country_id) values (29, 'Caudry', '59540', 75);
+insert into town (id, name, postal_code, country_id) values (30, 'Bailleul', '59270', 75);
+insert into town (id, name, postal_code, country_id) values (31, 'Haubourdin', '59320', 75);
+insert into town (id, name, postal_code, country_id) values (32, 'Hautmont', '59330', 75);
+insert into town (id, name, postal_code, country_id) values (33, 'Mouvaux', '59420', 75);
+insert into town (id, name, postal_code, country_id) values (34, 'Anzin', '59410', 75);
+insert into town (id, name, postal_code, country_id) values (35, 'Wattignies', '59139', 75);
+insert into town (id, name, postal_code, country_id) values (36, 'Roncq', '59223', 75);
+insert into town (id, name, postal_code, country_id) values (37, 'Lys-lez-Lannoy', '59390', 75);
+insert into town (id, name, postal_code, country_id) values (38, 'Raismes', '59590', 75);
+insert into town (id, name, postal_code, country_id) values (39, 'Somain', '59490', 75);
+insert into town (id, name, postal_code, country_id) values (40, 'Comines', '59560', 75);
+insert into town (id, name, postal_code, country_id) values (41, 'Fourmies', '59610', 75);
 
-insert into team (id, age, name, town_id) values (1, '-11 ans', 'Buffles', 1);
-insert into team (id, age, name, town_id) values (2, '-11 ans', 'Renards', 2);
-insert into team (id, age, name, town_id) values (3, '-11 ans', 'Ecureils', 3);
+insert into town (id, name, postal_code, country_id) values (300, 'Ypres', '4521', 18);
+
+insert into team (id, age, name, town_id) values (1, '-11 ans', 'chien', 1);
+insert into team (id, age, name, town_id) values (2, '-11 ans', 'chat', 2);
+insert into team (id, age, name, town_id) values (3, '-11 ans', 'furet', 3);
+insert into team (id, age, name, town_id) values (4, '-11 ans', 'cheval', 4);
+insert into team (id, age, name, town_id) values (5, '-11 ans', 'âne', 5);
+insert into team (id, age, name, town_id) values (6, '-11 ans', 'porc', 6);
+insert into team (id, age, name, town_id) values (7, '-11 ans', 'dromadaire', 7);
+insert into team (id, age, name, town_id) values (8, '-11 ans', 'chameau', 8);
+insert into team (id, age, name, town_id) values (9, '-11 ans', 'lama', 9);
+insert into team (id, age, name, town_id) values (10, '-11 ans', 'alpaga', 10);
+insert into team (id, age, name, town_id) values (11, '-11 ans', 'renne', 11);
+insert into team (id, age, name, town_id) values (12, '-11 ans', 'boeuf', 12);
+insert into team (id, age, name, town_id) values (13, '-11 ans', 'yack', 13);
+insert into team (id, age, name, town_id) values (14, '-11 ans', 'zébu', 14);
+insert into team (id, age, name, town_id) values (15, '-11 ans', 'buffle', 15);
+insert into team (id, age, name, town_id) values (16, '-11 ans', 'chèvre', 16);
+insert into team (id, age, name, town_id) values (17, '-11 ans', 'mouton', 17);
+insert into team (id, age, name, town_id) values (18, '-11 ans', 'souris', 18);
+insert into team (id, age, name, town_id) values (19, '-11 ans', 'rat', 19);
+insert into team (id, age, name, town_id) values (20, '-11 ans', 'hamster', 20);
+insert into team (id, age, name, town_id) values (21, '-11 ans', 'gerbille', 21);
+insert into team (id, age, name, town_id) values (22, '-11 ans', 'gorille', 23);
+
 
 /* ************************ */
 /* ***** Tournament 1 ***** */
 /* ************************ */
-insert into tournament (id, name, tournament_date, town_id, sport_id) values (1, 'Mai the First', '2015-05-01 00:00:00', 1, 1);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (1, 'May the First', '2015-05-01 00:00:00', 1, 1);
 
 insert into match (id, date, tournament_id) values (1, '2015-05-01 16:00:00', 1);
 
@@ -346,7 +457,9 @@ insert into match_team (match_id, team_id) values (8, 3);
 insert into match_team (match_id, team_id) values (9, 2);
 insert into match_team (match_id, team_id) values (9, 3);
 
+/* ************************ */
 /* ***** Tournament 4 ***** */
+/* ************************ */
 insert into tournament (id, name, tournament_date, town_id, sport_id) values (4, 'Pentecote', '2015-05-24 00:00:00', 1, 1);
 
 insert into match (id, date, tournament_id) values (10, '2015-05-24 16:00:00', 4);
@@ -359,3 +472,71 @@ insert into match_team (match_id, team_id) values (11, 1);
 insert into match_team (match_id, team_id) values (11, 3);
 insert into match_team (match_id, team_id) values (12, 2);
 insert into match_team (match_id, team_id) values (12, 3);
+
+
+/* ************************ */
+/* * Data to fill the DB ** */
+/* ************************ */
+
+
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (5,  'May the First',  '2015-05-01 00:00:00', 5, 2);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (6,  'May the Height', '2015-05-08 00:00:00', 5, 2);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (7,  'Ascention',      '2015-05-14 00:00:00', 5, 2);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (8,  'Pentecote',      '2015-05-24 00:00:00', 5, 2);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (9,  'May the First',  '2015-05-01 00:00:00', 8, 3);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (10, 'May the Height', '2015-05-08 00:00:00', 8, 3);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (11, 'Ascention',      '2015-05-14 00:00:00', 8, 3);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (12, 'Pentecote',      '2015-05-24 00:00:00', 8, 3);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (13, 'May the First',  '2015-05-01 00:00:00', 9, 4);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (14, 'May the Height', '2015-05-08 00:00:00', 9, 4);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (15, 'Ascention',      '2015-05-14 00:00:00', 9, 4);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (16, 'Pentecote',      '2015-05-24 00:00:00', 9, 4);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (17, 'May the First',  '2015-05-01 00:00:00', 7, 5);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (18, 'May the Height', '2015-05-08 00:00:00', 7, 5);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (19, 'Ascention',      '2015-05-14 00:00:00', 7, 5);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (20, 'Pentecote',      '2015-05-24 00:00:00', 7, 5);
+insert into tournament (id, name, tournament_date, town_id, sport_id) values (21, 'May the First',  '2015-05-01 00:00:00', 6, 6);
+
+insert into match (id, date, tournament_id) values (13, '2015-05-01 16:00:00', 5);
+insert into match (id, date, tournament_id) values (14, '2015-05-01 16:30:00', 5);
+insert into match (id, date, tournament_id) values (15, '2015-05-01 17:00:00', 5);
+
+insert into match (id, date, tournament_id) values (16, '2015-05-08 16:00:00', 6);
+insert into match (id, date, tournament_id) values (17, '2015-05-08 16:30:00', 6);
+insert into match (id, date, tournament_id) values (18, '2015-05-08 17:00:00', 6);
+
+insert into match (id, date, tournament_id) values (19, '2015-05-14 16:00:00', 7);
+insert into match (id, date, tournament_id) values (20, '2015-05-14 16:30:00', 7);
+insert into match (id, date, tournament_id) values (21, '2015-05-14 17:00:00', 7);
+
+insert into match (id, date, tournament_id) values (22, '2015-05-24 16:00:00', 8);
+insert into match (id, date, tournament_id) values (23, '2015-05-24 16:30:00', 8);
+insert into match (id, date, tournament_id) values (24, '2015-05-24 17:00:00', 8);
+
+insert into match_team (match_id, team_id) values (13, 11);
+insert into match_team (match_id, team_id) values (13, 12);
+insert into match_team (match_id, team_id) values (14, 11);
+insert into match_team (match_id, team_id) values (14, 13);
+insert into match_team (match_id, team_id) values (15, 12);
+insert into match_team (match_id, team_id) values (15, 13);
+
+insert into match_team (match_id, team_id) values (16, 14);
+insert into match_team (match_id, team_id) values (16, 15);
+insert into match_team (match_id, team_id) values (17, 14);
+insert into match_team (match_id, team_id) values (17, 16);
+insert into match_team (match_id, team_id) values (18, 15);
+insert into match_team (match_id, team_id) values (18, 16);
+
+insert into match_team (match_id, team_id) values (19, 17);
+insert into match_team (match_id, team_id) values (19, 18);
+insert into match_team (match_id, team_id) values (20, 17);
+insert into match_team (match_id, team_id) values (20, 19);
+insert into match_team (match_id, team_id) values (21, 18);
+insert into match_team (match_id, team_id) values (21, 19);
+
+insert into match_team (match_id, team_id) values (22, 20);
+insert into match_team (match_id, team_id) values (22, 21);
+insert into match_team (match_id, team_id) values (23, 20);
+insert into match_team (match_id, team_id) values (23, 22);
+insert into match_team (match_id, team_id) values (24, 21);
+insert into match_team (match_id, team_id) values (24, 22);

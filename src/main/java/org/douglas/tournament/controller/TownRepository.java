@@ -14,18 +14,17 @@ public interface TownRepository extends PagingAndSortingRepository<Town, Long> {
   List<Town> findByName(@Param("name") String name);
   List<Town> findByNameStartingWithIgnoreCase(@Param("name") String name);
   
-  @Query(value = "	SELECT * "
-  				+ "	FROM TOWN INNER JOIN COUNTRY ON "
-  				+ "		(TOWN.COUNTRY_ID = COUNTRY.ID) "
-  				+ " WHERE (:country IS NOT NULL "
-  				+ " 	AND :town IS NOT NULL"
-  				+ " 	AND LOWER(COUNTRY.NAME) LIKE LOWER(CONCAT(:country, '%')) "
-  				+ " 	AND LOWER(TOWN.NAME) like LOWER(CONCAT(:town, '%'))) "
-  				+ " OR (:country IS NULL "
-  				+ " 	AND :town IS NOT NULL"
-  				+ " 	AND LOWER(TOWN.NAME) like LOWER(CONCAT(:town, '%'))) "
-  				+ " OR (:country IS NOT NULL "
-  				+ " 	AND :town IS NULL"
-  				+ " 	AND LOWER(COUNTRY.NAME) LIKE LOWER(CONCAT(:country, '%')))", nativeQuery = true)
+  @Query(value = "	SELECT T "
+			+ "	FROM Town T JOIN T.country C "
+			+ " WHERE ( :country     IS NOT NULL "
+			+ " 	AND :town		 IS NOT NULL "
+			+ " 	AND LOWER(C.name) LIKE LOWER(CONCAT(:country, '%')) "
+			+ " 	AND LOWER(T.name) LIKE LOWER(CONCAT(:town, '%'))) "
+			+ " OR (    :country     IS NULL "
+			+ " 	AND :town 		 IS NOT NULL "
+			+ " 	AND LOWER(T.name) like LOWER(CONCAT(:town, '%'))) "
+			+ " OR (    :country     IS NOT NULL "
+			+ " 	AND :town 		 IS NULL "
+			+ " 	AND LOWER(C.name) LIKE LOWER(CONCAT(:country, '%')))")
   List<Town> findByNamesStartingWithIgnoreCase(@Param("town") String name, @Param("country") String countryName);
 }
